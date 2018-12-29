@@ -1,0 +1,11 @@
+<div id="flash_messages">
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, :class => "flash #{key}") %>
+  <% end %>
+</div>
+
+<% if @user.errors.any? %>
+	<% @user.errors.full_messages.each do |msg| %>
+		<%= msg %>
+	<% end %>
+<% end %>

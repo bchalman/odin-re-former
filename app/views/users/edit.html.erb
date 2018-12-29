@@ -1,0 +1,11 @@
+<%= render 'shared/errors' if !flash.empty? %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username, "Your username here:" %><br />
+  <%= f.text_field :username %><br />
+  <%= f.label :email %><br />
+  <%= f.email_field :email, placeholder: "example@example.com" %><br />
+  <%= f.label :password %><br />
+  <%= f.password_field :password %><br />
+  <%= f.submit %>
+<% end %>

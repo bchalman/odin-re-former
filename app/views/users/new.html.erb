@@ -19,6 +19,8 @@
   <%= submit_tag("Submit") %>
 <% end %> -->
 
+<%= render 'shared/errors' if !flash.empty? %>
+
 <%= form_for @user do |f| %>
   <%= f.label :username, "Your username here:" %><br />
   <%= f.text_field :username, :value => "Temp" %><br />
